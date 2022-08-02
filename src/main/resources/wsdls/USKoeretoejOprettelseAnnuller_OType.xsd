@@ -27,7 +27,7 @@
     </xs:element>
     <xs:complexType name="USKoeretoejOprettelseAnnuller_OType">
         <xs:sequence>
-            <xs:element ref="kontekst:HovedOplysningerSvar"/>
+            <!--<xs:element ref="kontekst:HovedOplysningerSvar"/>-->
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

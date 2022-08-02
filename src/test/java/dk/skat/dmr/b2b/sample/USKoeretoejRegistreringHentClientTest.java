@@ -12,7 +12,7 @@ public class USKoeretoejRegistreringHentClientTest {
 
     @Test
     public void invoke() throws Exception {
-        String endpointURL = System.getProperty("dk.skat.dmr.b2b.sample.USImportoerService.ENDPOINT");
+        String endpointURL = "http://localhost:9001/USImportoerService";
 
         String registreringNummerNummer = "AB12345";
 

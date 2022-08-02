@@ -31,7 +31,7 @@
     </xs:element>
     <xs:complexType name="USKoeretoejBetegnelseOpret_OType">
         <xs:sequence>
-            <xs:element ref="kontekst:HovedOplysningerSvar"/>
+            <!--<xs:element ref="kontekst:HovedOplysningerSvar"/>-->
             <xs:element minOccurs="0" ref="dmr:KoeretoejMaerkeTypeNummer"/>
             <xs:element minOccurs="0" ref="dmr:KoeretoejMaerkeTypeNavn"/>
             <xs:element minOccurs="0" ref="dmr:KoeretoejModelTypeNummer"/>

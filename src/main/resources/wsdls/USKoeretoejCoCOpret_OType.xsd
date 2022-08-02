@@ -29,7 +29,7 @@
     </xs:element>
     <xs:complexType name="USKoeretoejCoCOpret_OType">
         <xs:sequence>
-            <xs:element ref="kontekst:HovedOplysningerSvar"/>
+            <!--<xs:element ref="kontekst:HovedOplysningerSvar"/>-->
             <xs:element minOccurs="0" ref="dmr:KoeretoejIdent"/>
             <xs:element minOccurs="0" ref="dmr:KoeretoejRegistreringGrundlagKode"/>
             <xs:element minOccurs="0" ref="dmr:KoeretoejRegistreringGrundlagIdent"/>

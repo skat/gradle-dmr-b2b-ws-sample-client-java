@@ -3,7 +3,8 @@
     elementFormDefault="qualified"
     targetNamespace="http://skat.dk/dmr/2007/05/31/" version="1.0"
     xmlns:dmr="http://skat.dk/dmr/2007/05/31/"
-    xmlns:kontekst="http://rep.oio.dk/skat.dk/basis/kontekst/xml/schemas/2006/09/01/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    xmlns:ctx="http://rep.oio.dk/skat.dk/basis/kontekst/xml/schemas/2006/09/01/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
         <xs:documentation/>
         <xs:documentation>r15009</xs:documentation>
@@ -29,7 +30,7 @@
     </xs:element>
     <xs:complexType name="USKoeretoejTypeAttestOpret_OType">
         <xs:sequence>
-            <xs:element ref="kontekst:HovedOplysningerSvar"/>
+            <!--<xs:element ref="ctx:HovedOplysningerSvar"/>-->
             <xs:element minOccurs="0" ref="dmr:KoeretoejIdent"/>
             <xs:element minOccurs="0" ref="dmr:KoeretoejRegistreringGrundlagKode"/>
             <xs:element minOccurs="0" ref="dmr:KoeretoejRegistreringGrundlagIdent"/>

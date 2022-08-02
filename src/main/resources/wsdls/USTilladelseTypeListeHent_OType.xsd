@@ -28,7 +28,7 @@
     </xs:element>
     <xs:complexType name="USTilladelseTypeListeHent_OType">
         <xs:sequence>
-            <xs:element ref="kontekst:HovedOplysningerSvar"/>
+            <!--<xs:element ref="kontekst:HovedOplysningerSvar"/>-->
             <xs:element minOccurs="0" name="TilladelseTypeSamling">
                 <xs:complexType>
                     <xs:sequence>

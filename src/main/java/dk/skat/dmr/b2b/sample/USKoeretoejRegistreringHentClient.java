@@ -26,9 +26,7 @@ import java.util.logging.Logger;
  */
 @SuppressWarnings("ALL")
 public class USKoeretoejRegistreringHentClient {
-
     private static final Logger LOGGER = Logger.getLogger(USKoeretoejRegistreringHentClient.class.getName());
-
     private String endpointURL;
 
     /**
@@ -68,18 +66,11 @@ public class USKoeretoejRegistreringHentClient {
      * @throws SAXException N/A
      */
     public void invoke(String registreringNummerNummer) throws DatatypeConfigurationException, ParserConfigurationException, IOException, SAXException {
-
         final String newLine = System.getProperty("line.separator");
-
-        // Generate Transaction Id
         final String transactionID = TransactionIdGenerator.getTransactionId();
-
-        // Generate Transaction Time
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         gregorianCalendar.setTime(new Date());
         XMLGregorianCalendar transactionTime = DatatypeFactory.newInstance().newXMLGregorianCalendar(gregorianCalendar);
-
-        // Build HovedOplysninger Object and set transaction id and time
         HovedOplysningerType hovedOplysningerType = new HovedOplysningerType();
         hovedOplysningerType.setTransaktionIdentifikator(transactionID);
         hovedOplysningerType.setTransaktionTid(transactionTime);
@@ -97,12 +88,11 @@ public class USKoeretoejRegistreringHentClient {
         Bus bus = new SpringBusFactory().createBus("dmr-b2b-policy.xml", false);
         BusFactory.setDefaultBus(bus);
 
-
         USImportoerService service = new USImportoerService();
         USImportoerServiceType port = service.getPort();
 
         // Set endpoint of service.
-        BindingProvider bp = (BindingProvider)port;
+        BindingProvider bp = (BindingProvider) port;
         bp.getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, this.endpointURL);
 
         StringBuilder sbRequest = new StringBuilder();
@@ -116,7 +106,6 @@ public class USKoeretoejRegistreringHentClient {
         sbRequest.append("**** AfgiftOperatoerPunktAfgiftIdentifikator: ").append(usKoeretoejTekniskDataHentIType.getKoeretoejGenerelIdentifikatorStruktur().getKoeretoejGenerelIdentifikatorValg().getRegistreringNummerNummer()).append(newLine);
         sbRequest.append("*******************************************************************").append(newLine);
         LOGGER.info(newLine + sbRequest.toString());
-
 
         USKoeretoejRegistreringHentO out = port.getUSKoeretoejRegistreringHent(usKoeretoejTekniskDataHentIType);
         StringBuilder sb = new StringBuilder();
@@ -147,5 +136,4 @@ public class USKoeretoejRegistreringHentClient {
 
         LOGGER.info(newLine + sb.toString());
     }
-
 }
