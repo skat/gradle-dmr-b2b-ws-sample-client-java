@@ -12,7 +12,7 @@ public class USKoeretoejRegistreringHentClientTest {
 
     @Test
     public void invoke() throws Exception {
-        String endpointURL = "http://localhost:9001/USImportoerService";
+        String endpointURL = "https://dmrsit1gateway1.skat.dk/B2B/USImportoer/Service";
 
         String registreringNummerNummer = "AB12345";
 
