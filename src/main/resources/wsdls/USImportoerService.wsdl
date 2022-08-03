@@ -72,7 +72,7 @@
       <xsd:include schemaLocation="USKoeretoejBlokeringAArsagTypeListeHentInterface.xsd"/>
     </xsd:schema>
   </wsdl:types>
-  <!--<wsdl:message name="USKoeretoejUdstyrTypeListeHentServiceRequest">
+  <wsdl:message name="USKoeretoejUdstyrTypeListeHentServiceRequest">
     <wsdl:part element="pfx0:USKoeretoejUdstyrTypeListeHent_I" name="Request"/>
   </wsdl:message>
   <wsdl:message name="USKoeretoejErklaeringOpretServiceResponse">
@@ -97,14 +97,14 @@
   <wsdl:message name="USKoeretoejBlokeringAarsagTypeListeHentServiceRequest">
     <wsdl:part
             element="pfx0:USKoeretoejBlokeringAarsagTypeListeHent_I" name="Request"/>
-  </wsdl:message>-->
+  </wsdl:message>
   <wsdl:message name="USKoeretoejTypeAttestOpretServiceResponse">
     <wsdl:part element="pfx0:USKoeretoejTypeAttestOpret_O" name="Response"/>
   </wsdl:message>
   <wsdl:message name="USKoeretoejTypeAttestOpretServiceRequest">
     <wsdl:part element="pfx0:USKoeretoejTypeAttestOpret_I" name="Request"/>
   </wsdl:message>
-  <!--<wsdl:message name="USKoeretoejUdstyrTypeListeHentServiceResponse">
+  <wsdl:message name="USKoeretoejUdstyrTypeListeHentServiceResponse">
     <wsdl:part element="pfx0:USKoeretoejUdstyrTypeListeHent_O" name="Response"/>
   </wsdl:message>
   <wsdl:message name="USKoeretoejTekniskDataHentServiceResponse">
@@ -165,14 +165,14 @@
   </wsdl:message>
   <wsdl:message name="USKoeretoejArtListeHentServiceRequest">
     <wsdl:part element="pfx0:USKoeretoejArtListeHent_I" name="Request"/>
-  </wsdl:message>-->
+  </wsdl:message>
   <wsdl:message name="USKoeretoejRegistreringHentServiceRequest">
     <wsdl:part element="pfx0:USKoeretoejRegistreringHent_I" name="Request"/>
   </wsdl:message>
   <wsdl:message name="USKoeretoejRegistreringHentServiceResponse">
     <wsdl:part element="pfx0:USKoeretoejRegistreringHent_O" name="Response"/>
   </wsdl:message>
-  <!--<wsdl:message name="USDispensationTypeListeHentServiceResponse">
+  <wsdl:message name="USDispensationTypeListeHentServiceResponse">
     <wsdl:part element="pfx0:USDispensationTypeListeHent_O" name="Response"/>
   </wsdl:message>
   <wsdl:message name="USKoeretoejArtAnvendelseListeHentServiceResponse">
@@ -201,7 +201,7 @@
   </wsdl:message>
   <wsdl:message name="USKoeretoejCoCOpretServiceRequest">
     <wsdl:part element="pfx0:USKoeretoejCoCOpret_I" name="Request"/>
-  </wsdl:message>-->
+  </wsdl:message>
   <wsdl:message name="KompenserTransRequest">
     <wsdl:part element="pfx0:KompenserTrans" name="Request"/>
   </wsdl:message>
@@ -217,7 +217,7 @@
       <wsdl:input message="pfx0:KompenserTransRequest"/>
       <wsdl:output message="pfx0:KompenserTransResponse"/>
     </wsdl:operation>
-    <!--<wsdl:operation name="getUSKoeretoejUdstyrTypeListeHent">
+    <wsdl:operation name="getUSKoeretoejUdstyrTypeListeHent">
       <wsdl:input message="pfx0:USKoeretoejUdstyrTypeListeHentServiceRequest"/>
       <wsdl:output message="pfx0:USKoeretoejUdstyrTypeListeHentServiceResponse"/>
     </wsdl:operation>
@@ -284,19 +284,19 @@
     <wsdl:operation name="getUSFarveTypeListeHent">
       <wsdl:input message="pfx0:USFarveTypeListeHentServiceRequest"/>
       <wsdl:output message="pfx0:USFarveTypeListeHentServiceResponse"/>
-    </wsdl:operation>-->
+    </wsdl:operation>
     <wsdl:operation name="getUSKoeretoejRegistreringHent">
       <wsdl:input message="pfx0:USKoeretoejRegistreringHentServiceRequest"/>
       <wsdl:output message="pfx0:USKoeretoejRegistreringHentServiceResponse"/>
     </wsdl:operation>
-    <!--<wsdl:operation name="getUSUkompletKoeretoejOpret">
+    <wsdl:operation name="getUSUkompletKoeretoejOpret">
       <wsdl:input message="pfx0:USUkompletKoeretoejOpretServiceRequest"/>
       <wsdl:output message="pfx0:USUkompletKoeretoejOpretServiceResponse"/>
     </wsdl:operation>
     <wsdl:operation name="getUSKoeretoejBlokeringAarsagTypeListeHent">
       <wsdl:input message="pfx0:USKoeretoejBlokeringAarsagTypeListeHentServiceRequest"/>
       <wsdl:output message="pfx0:USKoeretoejBlokeringAarsagTypeListeHentServiceResponse"/>
-    </wsdl:operation>-->
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Binding" type="pfx0:USImportoerServiceType">
     <pfx4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -318,7 +318,7 @@
         <pfx4:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <!--<wsdl:operation name="getUSKoeretoejUdstyrTypeListeHent">
+    <wsdl:operation name="getUSKoeretoejUdstyrTypeListeHent">
       <pfx4:operation soapAction="getUSKoeretoejUdstyrTypeListeHent"/>
       <wsdl:input>
         <pfx4:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
@@ -470,7 +470,7 @@
       <wsdl:output>
         <pfx4:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
       </wsdl:output>
-    </wsdl:operation>-->
+    </wsdl:operation>
     <wsdl:operation name="getUSKoeretoejRegistreringHent">
       <pfx4:operation soapAction="getUSKoeretoejRegistreringHent"/>
       <wsdl:input>
@@ -480,7 +480,7 @@
         <pfx4:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <!--<wsdl:operation name="getUSUkompletKoeretoejOpret">
+    <wsdl:operation name="getUSUkompletKoeretoejOpret">
       <pfx4:operation soapAction="getUSUkompletKoeretoejOpret"/>
       <wsdl:input>
         <pfx4:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
@@ -497,7 +497,7 @@
       <wsdl:output>
         <pfx4:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="literal"/>
       </wsdl:output>
-    </wsdl:operation>-->
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="USImportoerService">
     <wsdl:port binding="pfx0:Binding" name="Port">

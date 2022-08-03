@@ -64,8 +64,9 @@ public class USKoeretoejRegistreringHentClient {
      * @throws ParserConfigurationException N/A
      * @throws IOException N/A
      * @throws SAXException N/A
+     * @return
      */
-    public void invoke(String registreringNummerNummer) throws DatatypeConfigurationException, ParserConfigurationException, IOException, SAXException {
+    public USKoeretoejRegistreringHentO invoke(String registreringNummerNummer) throws DatatypeConfigurationException, ParserConfigurationException, IOException, SAXException {
         final String newLine = System.getProperty("line.separator");
         final String transactionID = TransactionIdGenerator.getTransactionId();
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
@@ -135,5 +136,6 @@ public class USKoeretoejRegistreringHentClient {
         sb.append("*******************************************************************").append(newLine);
 
         LOGGER.info(newLine + sb.toString());
+        return out;
     }
 }

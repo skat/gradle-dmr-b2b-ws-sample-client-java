@@ -32,22 +32,15 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
-
     <!-- Handle secure / TLS Transport
-
      The keystore client-truststore.jks contains the SSL cert. for the test system
      as a trusted certificate.
-
      For more information please see:
      http://cxf.apache.org/docs/client-http-transport-including-ssl-support.html
-
      -->
     <http:conduit name="*.http-conduit">
         <!-- Set timeout to 3 minutes -->
-        <http:client Connection="Keep-Alive"
-                     MaxRetransmits="1"
-                     AllowChunking="false"
-                     ConnectionTimeout="180000"/>
+        <http:client Connection="Keep-Alive" MaxRetransmits="1" AllowChunking="false" ConnectionTimeout="180000"/>
         <http:tlsClientParameters>
             <sec:keyManagers keyPassword="storepassword">
                 <sec:keyStore file="src/main/resources/keystore/client-truststore.jks" password="storepassword" type="JKS"/>
@@ -70,7 +63,6 @@
             </sec:cipherSuitesFilter>
         </http:tlsClientParameters>
     </http:conduit>
-
     <cxf:bus>
         <cxf:inInterceptors>
             <bean id="logInbound" class="org.apache.cxf.interceptor.LoggingInInterceptor"/>
@@ -114,12 +106,10 @@
             <bean id="logOutbound" class="org.apache.cxf.interceptor.LoggingOutInterceptor"/>
         </cxf:outInterceptors>
     </cxf:bus>
-
     <!-- This part is only relevant if the client consumes the effective WSDL of the
          running web service. That is, fetches the WSDL from the running system and
          in that case we have to ignore certain polices as CXF does not have native
          handlers for these policies.
-
          In this sample: the wsdl is fetched locally from the resources directory.
     -->
     <bean class="org.apache.cxf.ws.policy.IgnorablePolicyInterceptorProvider">
